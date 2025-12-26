@@ -30,44 +30,39 @@ const TitleBar = () => {
     }, []);
 
     return (
-        <div className="flex h-10 flex-col">
-            <div
-                style={{ ...curr }}
-                className="title-bar relative z-10 flex h-9 items-center p-2 select-none"
-            >
-                <div className="flex items-center space-x-1.5 p-1">
-                    <button
-                        className="traffic transition-all duration-150 hover:scale-110 active:scale-95"
-                        onClick={() => controls.close()}
-                        style={{ '--traffic-color': 'var(--traffic-red)' } as React.CSSProperties}
-                        title="Close"
-                    />
+        <div
+            style={{ ...curr }}
+            className="title-bar relative z-10 flex h-10 items-center p-2 select-none"
+        >
+            <div className="flex items-center space-x-1.5 p-1">
+                <button
+                    className="traffic transition-all duration-150 hover:scale-110 active:scale-95"
+                    onClick={() => controls.close()}
+                    style={{ '--traffic-color': 'var(--traffic-red)' } as React.CSSProperties}
+                    title="Close"
+                />
 
-                    <button
-                        className="traffic transition-all duration-150 hover:scale-110 active:scale-95"
-                        onClick={() => controls.minimize()}
-                        style={
-                            { '--traffic-color': 'var(--traffic-yellow)' } as React.CSSProperties
-                        }
-                        title="Minimize"
-                    />
+                <button
+                    className="traffic transition-all duration-150 hover:scale-110 active:scale-95"
+                    onClick={() => controls.minimize()}
+                    style={{ '--traffic-color': 'var(--traffic-yellow)' } as React.CSSProperties}
+                    title="Minimize"
+                />
 
-                    <button
-                        className="traffic transition-all duration-150 hover:scale-110 active:scale-95"
-                        onClick={() => controls.maximize()}
-                        style={{ '--traffic-color': 'var(--traffic-green)' } as React.CSSProperties}
-                        title="Maximize"
-                    />
-                </div>
-
-                <div
-                    data-tauri-drag-region
-                    className="absolute top-0 right-0 bottom-0 left-16 flex items-center px-4"
-                >
-                    <div className="truncate text-sm font-medium">Leaf Editor</div>
-                </div>
+                <button
+                    className="traffic transition-all duration-150 hover:scale-110 active:scale-95"
+                    onClick={() => controls.maximize()}
+                    style={{ '--traffic-color': 'var(--traffic-green)' } as React.CSSProperties}
+                    title="Maximize"
+                />
             </div>
-            <div data-tauri-drag-region className="bloom z-0 h-1 w-full" />
+
+            <div
+                data-tauri-drag-region
+                className="absolute top-0 right-0 bottom-0 left-16 flex items-center px-4"
+            >
+                <div className="truncate text-sm font-medium">Leaf Editor</div>
+            </div>
         </div>
     );
 };
