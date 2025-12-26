@@ -1,0 +1,68 @@
+{
+    "name": "MacBook Light",
+    "type": "light",
+    "colors": {
+        "background": "#f5f5f7",
+        "color": "#1d1d1f",
+        "border": "#d2d2d7",
+        "accent": "#007aff",
+        "primary": "#007aff",
+        "secondary": "#34c759",
+        "titleBar": {
+            "background": "#ffffff",
+            "color": "#1d1d1f",
+            "border": "#e5e5e7",
+            "hoverBackground": "#f2f2f7",
+            "hoverColor": "#000000"
+        },
+        "activityBar": {
+            "background": "#fafafa",
+            "color": "#636366",
+            "border": "#e5e5e7",
+            "hoverBackground": "#f2f2f7",
+            "hoverColor": "#1d1d1f"
+        },
+        "sidebar": {
+            "background": "#f5f5f7",
+            "color": "#636366",
+            "border": "#d2d2d7",
+            "hoverBackground": "#f2f2f7",
+            "hoverColor": "#1d1d1f",
+            "highlight": "#007aff",
+            "selected": "#e8f2ff"
+        },
+        "input": {
+            "background": "#ffffff",
+            "color": "#1d1d1f",
+            "border": "#d2d2d7"
+        },
+        "statusBar": {
+            "background": "#f5f5f7",
+            "color": "#636366",
+            "border": "#d2d2d7",
+            "hoverBackground": "#f2f2f7",
+            "hoverColor": "#1d1d1f"
+        },
+        "terminal": {
+            "background": "#ffffff",
+            "color": "#1d1d1f",
+            "border": "#d2d2d7",
+            "hoverBackground": "#f2f2f7",
+            "hoverColor": "#000000"
+        },
+        "panel": {
+            "background": "#f5f5f7",
+            "color": "#636366",
+            "border": "#d2d2d7",
+            "hoverBackground": "#f2f2f7",
+            "hoverColor": "#1d1d1f"
+        },
+        "editor": {
+            "background": "#ffffff",
+            "color": "#1d1d1f",
+            "border": "#d2d2d7",
+            "hoverBackground": "#f2f2f7",
+            "hoverColor": "#000000"
+        }
+    }
+}

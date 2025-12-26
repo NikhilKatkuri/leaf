@@ -1,30 +1,56 @@
 @import 'tailwindcss';
 
-.titlebar {
-    height: 30px;
-    background: #329ea3;
-    user-select: none;
-    display: grid;
-    grid-template-columns: auto max-content;
-    position: fixed;
-    top: 0;
+:root {
+    --traffic-red: #ea4335;
+    --traffic-yellow: #fbbc04;
+    --traffic-green: #34a853;
+}
+body {
+    overflow: hidden;
+}
+
+.traffic {
+    width: 10px;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    background: var(--traffic-color);
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.05);
+}
+.bloom {
+    opacity: 0.4;
+    background: linear-gradient(
+        90deg,
+        rgba(251, 188, 4, 0.2) 0%,
+        #fbbc04 30%,
+        #ea4335 50%,
+        #18d44a 70%,
+        rgba(24, 212, 74, 0.2) 100%
+    );
+    filter: blur(11.5px);
+}
+
+.title-bar {
+    position: relative;
+}
+.title-bar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
     left: 0;
-    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(251, 188, 4, 0.2) 0%,
+        #fbbc04 30%,
+        #ea4335 50%,
+        #18d44a 70%,
+        rgba(24, 212, 74, 0.2) 100%
+    );
 }
-.titlebar > .controls {
-    display: flex;
+*[data-tauri-drag-region] {
+    app-region: drag;
 }
-.titlebar button {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    border: none;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    background-color: transparent;
-}
-.titlebar button:hover {
-    background: #5bbec3;
+*[data-tauri-drag-noregion] {
+    app-region: no-drag;
 }
