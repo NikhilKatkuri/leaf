@@ -1,0 +1,193 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import './themes/theme.css';
+
+@theme inline {
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --radius-2xl: calc(var(--radius) + 8px);
+    --radius-3xl: calc(var(--radius) + 12px);
+    --radius-4xl: calc(var(--radius) + 16px);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+    --radius: 0.625rem;
+    --background: var(--editor-background);
+    --foreground: var(--editor-foreground);
+    --card: var(--side-bar-section-header-background);
+    --card-foreground: var(--side-bar-foreground);
+    --popover: var(--editor-widget-background);
+    --popover-foreground: var(--editor-widget-foreground);
+    --primary: var(--activity-bar-badge-background);
+    --primary-foreground: var(--activity-bar-badge-foreground);
+    --secondary: var(--button-secondary-background);
+    --secondary-foreground: var(--button-secondary-foreground);
+    --muted: var(--list-inactive-selection-background);
+    --muted-foreground: var(--side-bar-title-foreground);
+    --accent: var(--list-highlight-foreground);
+    --accent-foreground: var(--list-active-selection-foreground);
+    --destructive: var(--editor-error-foreground);
+    --border: var(--tree-indent-guides-stroke);
+    --input: var(--input-background);
+    --ring: var(--focus-border);
+    --chart-1: #ff3b30;
+    --chart-2: #34c759;
+    --chart-3: #ffcc02;
+    --chart-4: #007aff;
+    --chart-5: #af52de;
+    --sidebar: var(--side-bar-background);
+    --sidebar-foreground: var(--side-bar-foreground);
+    --sidebar-primary: var(--activity-bar-badge-background);
+    --sidebar-primary-foreground: var(--activity-bar-badge-foreground);
+    --sidebar-accent: var(--list-active-selection-background);
+    --sidebar-accent-foreground: var(--list-active-selection-foreground);
+    --sidebar-border: var(--side-bar-border);
+    --sidebar-ring: var(--list-highlight-foreground);
+}
+
+@theme inline {
+    --color-tooltip-background: var(--tooltip-bg);
+    --color-tooltip-border: var(--tooltip-border);
+    --color-tooltip-foreground: var(--tooltip-foreground);
+}
+
+@theme inline {
+    /* Primary Button */
+    --color-button-primary-bg: var(--button-primary-bg);
+    --color-button-primary-fg: var(--button-primary-fg);
+    --color-button-primary-hover: var(--button-primary-hover);
+    --color-button-primary-active: var(--button-primary-active);
+    --color-button-primary-disabled: var(--button-primary-disabled);
+
+    /* Secondary Button */
+    --color-button-secondary-bg: var(--button-secondary-bg);
+    --color-button-secondary-fg: var(--button-secondary-fg);
+    --color-button-secondary-hover: var(--button-secondary-hover);
+    --color-button-secondary-active: var(--button-secondary-active);
+    --color-button-secondary-border: var(--button-secondary-border);
+
+    /* Destructive Button */
+    --color-button-destructive-bg: var(--button-destructive-bg);
+    --color-button-destructive-fg: var(--button-destructive-fg);
+    --color-button-destructive-hover: var(--button-destructive-hover);
+    --color-button-destructive-active: var(--button-destructive-active);
+
+    /* Ghost Button */
+    --color-button-ghost-bg: var(--button-ghost-bg);
+    --color-button-ghost-fg: var(--button-ghost-fg);
+    --color-button-ghost-hover: var(--button-ghost-hover);
+    --color-button-ghost-active: var(--button-ghost-active);
+
+    /* Outline Button */
+    --color-button-outline-bg: var(--button-outline-bg);
+    --color-button-outline-fg: var(--button-outline-fg);
+    --color-button-outline-border: var(--button-outline-border);
+    --color-button-outline-hover: var(--button-outline-hover);
+    --color-button-outline-active: var(--button-outline-active);
+
+    /* Link Button */
+    --color-button-link-fg: var(--button-link-fg);
+    --color-button-link-hover: var(--button-link-hover);
+    --color-button-link-active: var(--button-link-active);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+:root {
+    --traffic-red: #ea4335;
+    --traffic-yellow: #fbbc04;
+    --traffic-green: #34a853;
+}
+
+.traffic {
+    width: 11px;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    background: var(--traffic-color);
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bloom {
+    opacity: 0.4;
+    background: linear-gradient(
+        90deg,
+        rgba(251, 188, 4, 0.2) 0%,
+        var(--traffic-yellow) 30%,
+        var(--traffic-red) 50%,
+        var(--traffic-green) 70%,
+        rgba(24, 212, 74, 0.2) 100%
+    );
+    filter: blur(11.5px);
+}
+
+.title-bar {
+    position: relative;
+}
+
+.title-bar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        rgba(251, 188, 4, 0.2) 0%,
+        var(--traffic-yellow) 30%,
+        var(--traffic-red) 50%,
+        var(--traffic-green) 70%,
+        rgba(24, 212, 74, 0.2) 100%
+    );
+}
+
+*[data-tauri-drag-region] {
+    app-region: drag;
+}
+*[data-tauri-drag-noregion] {
+    app-region: no-drag;
+}
+
+button {
+    cursor: pointer;
+}

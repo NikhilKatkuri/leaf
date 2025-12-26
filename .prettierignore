@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+dist/
+build/
+
+# Generated files
+*.lock
+*.log
+
+# Tauri generated files
+src-tauri/target/
+src-tauri/gen/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs
+public/
+assets/
+
+# Config files that should maintain their formatting
+*.min.js
+*.min.css
+
