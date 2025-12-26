@@ -1,8 +1,11 @@
- 
-const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+import TittleBar from './components/tittleBar';
 
-export default App
+const App = () => {
+    return (
+        <div>
+            <TittleBar />
+        </div>
+    );
+};
+
+export default App;

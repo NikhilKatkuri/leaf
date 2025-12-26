@@ -5,3 +5,4 @@ dist/
 node_modules/
 andriod/
 ios/
+package-lock.json

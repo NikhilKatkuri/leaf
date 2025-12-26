@@ -1,0 +1,6 @@
+src-tauri/*
+node_modules
+dist
+readme.md
+package-lock.json
+build
