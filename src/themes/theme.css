@@ -4,12 +4,12 @@
     --focus-border: #0a84ff;
     --selection-background: #2f5f8f;
     --scrollbar-shadow: #00000040;
-
+    --border: #12121e;
     /* Activity Bar */
-    --activity-bar-foreground: #757474;
+    --activity-bar-foreground: #7b7b7d;
     --activity-bar-background: #1c1c1e;
     --activity-bar-inactive-foreground: #8e8e93;
-    --activity-bar-badge-foreground: #f5f5f7;
+    --activity-bar-badge-foreground: #7b7b7d;
     --activity-bar-badge-background: #0a84ff;
     --activity-bar-border: #38383a;
     --activity-bar-active-background: #2c2c2e;
@@ -17,8 +17,8 @@
     /* Side Bar */
     --side-bar-background: #1c1c1e;
     --side-bar-foreground: #f5f5f7;
-    --side-bar-section-header-background: #2c2c2e;
-    --side-bar-section-header-foreground: #f5f5f7;
+    --side-bar-section-header-background: #1c1c1e;
+    --side-bar-section-header-foreground: #99999c;
     --side-bar-section-header-border: #38383a;
     --side-bar-title-foreground: #8e8e93;
     --side-bar-border: #38383a;
@@ -37,7 +37,7 @@
     --list-focus-foreground: #f5f5f7;
 
     /* Tree */
-    --tree-indent-guides-stroke: #48484a;
+    --tree-indent-guides-stroke: #121213;
 
     /* List Filter Widget */
     --list-filter-widget-background: #2c2c2e;
@@ -133,6 +133,7 @@
     /* Editor */
     --editor-background: #1c1c1e;
     --editor-foreground: #f5f5f7;
+    --editor-foreground-secondary: #8e8e93;
     --editor-line-number-foreground: #8e8e93;
     --editor-line-number-active-foreground: #f5f5f7;
     --editor-cursor-foreground: #0a84ff;

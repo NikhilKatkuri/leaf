@@ -47,6 +47,7 @@
     --radius: 0.625rem;
     --background: var(--editor-background);
     --foreground: var(--editor-foreground);
+    --foreground-secondary: var(--editor-foreground-secondary);
     --card: var(--side-bar-section-header-background);
     --card-foreground: var(--side-bar-foreground);
     --popover: var(--editor-widget-background);
