@@ -1,0 +1,232 @@
+import { useCallback, useState } from "react";
+import TerminalMenu from "./(menu)/TerminalMenu";
+import FileMenu from "./(menu)/FileMenu";
+import SelectionMenu from "./(menu)/SelectionMenu";
+import ViewMenu from "./(menu)/ViewMenu";
+
+interface MenuState {
+  index: number;
+  show: boolean;
+}
+
+const renderMenu = (index: number) => {
+  switch (index) {
+    case 0:
+      return <FileMenu />;
+    case 1:
+      return <SelectionMenu />;
+    case 2:
+      return <ViewMenu />;
+    case 3:
+      return <TerminalMenu />;
+    case 4:
+      return null;
+    default:
+      return null;
+  }
+};
+
+const MenuList = ["file", "Selection", "view", "terminal", "help"];
+
+const TitleBar = () => {
+  const [menuState, setMenuState] = useState<MenuState>({
+    index: -1,
+    show: false,
+  });
+
+  const handleMouseEnter = useCallback((index: number) => {
+    setMenuState({ index: index, show: true });
+  }, []);
+  const handleMouseLeave = () => {
+    setMenuState({ index: -1, show: false });
+  };
+
+  return (
+    <>
+      <div
+        data-tauri-drag-region
+        className="title-bar relative h-11 w-full grid grid-cols-[auto_1fr_auto] md:grid-cols-[auto_500px_auto] max-lg:space-x-3 lg:grid-cols-3 font-normal text-xs  px-2"
+      >
+        {/* left */}
+        <div className="flex items-center gap-4">
+          <div className="flex items-center space-x-1">
+            <button
+              aria-label="Close Window"
+              title="Close Window"
+              className="traffic traffic-red"
+            ></button>
+            <button
+              aria-label="Minimize Window "
+              title="Minimize Window"
+              className="traffic traffic-yellow"
+            ></button>
+            <button
+              aria-label="Maximize Window"
+              title="Maximize Window"
+              className="traffic traffic-green"
+            ></button>
+          </div>
+
+          <ul className="flex items-center max-lg:hidden relative">
+            {MenuList.map((item, index) => {
+              const active = index === menuState.index && menuState.show;
+              return (
+                <li
+                  id={index.toString()}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  key={index}
+                >
+                  <button className="ghost-button px-2.5 py-1">
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </button>
+                  {active && (
+                    <div
+                      onMouseLeave={handleMouseLeave}
+                      className={`absolute -left-4 top-9 z-10  w-96 h-auto menu-bar pl-0 `}
+                    >
+                      {renderMenu(index)}
+                    </div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        {/* center */}
+        <div className="grid grid-cols-[auto_1fr_auto] items-center justify-center gap-4">
+          <div className="flex items-center ">
+            <button
+              title="Previous Page"
+              aria-label="Previous Page"
+              className="ghost-button  p-2 "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 19.5 8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
+            <button
+              title="Next Page"
+              aria-label="Next Page"
+              className="ghost-button  p-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                aria-hidden="true"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <button
+            aria-label="leaf app"
+            title="leaf app"
+            className="w-full py-1  h-7 secondary-button flex items-center justify-center"
+          >
+            <span>leaf</span>
+          </button>
+          <button
+            aria-label="Some Label"
+            title="Some Title"
+            className="ghost-button p-2 aspect-square "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+              />
+            </svg>
+          </button>
+        </div>
+        {/* right */}
+        <div className="w-full flex items-center justify-end">
+          <button
+            title="Split Editor"
+            aria-label="Split Editor"
+            className="ghost-button p-2 aspect-square"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 18 18"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M6.75 2.8125H14.625C14.7742 2.8125 14.9173 2.87176 15.0227 2.97725C15.1282 3.08274 15.1875 3.22582 15.1875 3.375V14.625C15.1875 14.7742 15.1282 14.9173 15.0227 15.0227C14.9173 15.1282 14.7742 15.1875 14.625 15.1875H6.75V2.8125ZM5.0625 2.8125H3.375C3.22582 2.8125 3.08274 2.87176 2.97725 2.97725C2.87176 3.08274 2.8125 3.22582 2.8125 3.375V14.625C2.8125 14.7742 2.87176 14.9173 2.97725 15.0227C3.08274 15.1282 3.22582 15.1875 3.375 15.1875H5.0625V2.8125ZM1.125 3.375C1.125 2.77826 1.36205 2.20597 1.78401 1.78401C2.20597 1.36205 2.77826 1.125 3.375 1.125H14.625C15.2217 1.125 15.794 1.36205 16.216 1.78401C16.6379 2.20597 16.875 2.77826 16.875 3.375V14.625C16.875 15.2217 16.6379 15.794 16.216 16.216C15.794 16.6379 15.2217 16.875 14.625 16.875H3.375C2.77826 16.875 2.20597 16.6379 1.78401 16.216C1.36205 15.794 1.125 15.2217 1.125 14.625V3.375Z"
+                fill="#A3A3A3"
+              />
+            </svg>
+          </button>
+          <button
+            title="Split Editor"
+            aria-label="Split Editor"
+            className="ghost-button p-2 aspect-square"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 18 18"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M15.1875 11.25V3.375C15.1875 3.22582 15.1282 3.08274 15.0227 2.97725C14.9173 2.87176 14.7742 2.8125 14.625 2.8125L3.375 2.8125C3.22582 2.8125 3.08274 2.87176 2.97725 2.97725C2.87176 3.08274 2.8125 3.22582 2.8125 3.375V11.25L15.1875 11.25ZM15.1875 12.9375V14.625C15.1875 14.7742 15.1282 14.9173 15.0227 15.0227C14.9173 15.1282 14.7742 15.1875 14.625 15.1875L3.375 15.1875C3.22582 15.1875 3.08274 15.1282 2.97725 15.0227C2.87176 14.9173 2.8125 14.7742 2.8125 14.625V12.9375L15.1875 12.9375ZM14.625 16.875C15.2217 16.875 15.794 16.6379 16.216 16.216C16.6379 15.794 16.875 15.2217 16.875 14.625L16.875 3.375C16.875 2.77826 16.6379 2.20597 16.216 1.78401C15.794 1.36205 15.2217 1.125 14.625 1.125L3.375 1.125C2.77826 1.125 2.20597 1.36205 1.78401 1.78401C1.36205 2.20597 1.125 2.77826 1.125 3.375L1.125 14.625C1.125 15.2217 1.36205 15.794 1.78401 16.216C2.20597 16.6379 2.77826 16.875 3.375 16.875L14.625 16.875Z"
+                fill="#A3A3A3"
+              />
+            </svg>
+          </button>
+          <button
+            title="Split Editor"
+            aria-label="Split Editor"
+            className="ghost-button p-2 aspect-square"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 18 18"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M11.25 2.8125H3.375C3.22582 2.8125 3.08274 2.87176 2.97725 2.97725C2.87176 3.08274 2.8125 3.22582 2.8125 3.375V14.625C2.8125 14.7742 2.87176 14.9173 2.97725 15.0227C3.08274 15.1282 3.22582 15.1875 3.375 15.1875H11.25V2.8125ZM12.9375 2.8125H14.625C14.7742 2.8125 14.9173 2.87176 15.0227 2.97725C15.1282 3.08274 15.1875 3.22582 15.1875 3.375V14.625C15.1875 14.7742 15.1282 14.9173 15.0227 15.0227C14.9173 15.1282 14.7742 15.1875 14.625 15.1875H12.9375V2.8125ZM16.875 3.375C16.875 2.77826 16.6379 2.20597 16.216 1.78401C15.794 1.36205 15.2217 1.125 14.625 1.125H3.375C2.77826 1.125 2.20597 1.36205 1.78401 1.78401C1.36205 2.20597 1.125 2.77826 1.125 3.375V14.625C1.125 15.2217 1.36205 15.794 1.78401 16.216C2.20597 16.6379 2.77826 16.875 3.375 16.875H14.625C15.2217 16.875 15.794 16.6379 16.216 16.216C16.6379 15.794 16.875 15.2217 16.875 14.625V3.375Z"
+                fill="#A3A3A3"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default TitleBar;

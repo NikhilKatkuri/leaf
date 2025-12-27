@@ -17,7 +17,6 @@
   --bandage-border: #c6c6c8;
   --bandage-roundness: 50%;
 
-
   /* sizes */
   --rounded-sm: 2px;
   --rounded: 4px;
@@ -43,11 +42,20 @@
   --title-bar-foreground: #1d1d1f;
   --title-bar-interactive-background: #f2f2f7;
   --title-bar-interactive-foreground: #000000;
-  --title-bar-border: #e5e5e7;
+  --title-bar-border: 1px solid #e5e5e7;
   --title-bar-icon-size: var(--icon-sm);
   --title-bar-icon-stroke-width: 1.5px;
   --title-bar-highlight-background: #007acc;
   --title-bar-highlight-foreground: #ffffff;
+
+  --magic: linear-gradient(
+    90deg,
+    rgba(251, 188, 4, 0.2) 0%,
+    #fbbc04 30%,
+    #ea4335 50%,
+    #18d44a 70%,
+    rgba(24, 212, 74, 0.2) 100%
+  );
 
   /* sidebar - VS Code light style */
   --sidebar-background: #f3f3f3;
@@ -79,19 +87,25 @@
   --chat-bar-prompt-box-foreground: #1d1d1f;
   --chat-bar-prompt-box-icon-foreground: #6e6e73;
   --chat-bar-prompt-box-border: #d2d2d7;
-  --chat-bar-prompt-box-padding: 16px;
   --chat-bar-prompt-box-icon-size: var(--icon-sm);
   --chat-bar-prompt-box-icon-stroke-width: 1.5px;
   --chat-bar-prompt-box-roundness: var(--rounded-lg);
 
   /* menu bar */
+  /* Menu bar - Corrected Light Theme (macOS/Windows inspired) */
   --menu-bar-background: #fafafa;
-  --menu-bar-foreground: #1d1d1f;
-  --menu-bar-interactive-background: #f2f2f7;
-  --menu-bar-interactive-foreground: #000000;
+  --menu-bar-foreground: #1d1d1fac;
+  --menu-bar-interactive-background: rgba(
+    210,
+    210,
+    223,
+    0.2
+  ); /* #d2d2df with opacity */
+  --menu-bar-interactive-foreground: #1d1d1f; /* Dark text for readability */
   --menu-bar-selective-background: #e5e5ea;
   --menu-bar-selective-foreground: #000000;
-  --menu-bar-border: #d2d2d7;
+  --menu-bar-border: 1px solid #e5e5e7; /* Matches title-bar-border */
+  --menu-bar-roundness: var(--rounded);
   --menu-bar-icon-size: var(--icon-sm);
   --menu-bar-icon-stroke-width: var(--title-bar-icon-stroke-width);
   --menu-bar-icon-color-active: #007acc;
@@ -106,7 +120,6 @@
   --input-icon-foreground: #6e6e73;
   --input-icon-size: var(--icon-sm);
   --input-icon-stroke-width: var(--title-bar-icon-stroke-width);
-  --input-padding: 12px;
   --input-roundness: var(--rounded);
 
   /* button (default,ghost,icon) */
@@ -115,14 +128,19 @@
   --button-interactive-background: #0066cc;
   --button-interactive-foreground: #ffffff;
   --button-border: transparent;
-  --button-padding: 12px 16px;
   --button-roundness: var(--rounded);
+
+  /* secondary button  */
+  --secondary-button-background: #72747614;
+  --secondary-button-foreground: #05021a82;
+  --secondary-button-border: 1.8px solid #00000000;
+  --secondary-button-interactive-border: 1.8px solid rgb(6, 2, 35, 0.2);
+  --secondary-button-roundness: var(--rounded-lg);
 
   /* icon button */
   --icon-button-background: transparent;
   --icon-button-foreground: #1d1d1f;
   --icon-button-border: transparent;
-  --icon-button-padding: 8px;
   --icon-button-roundness: var(--rounded);
 
   /* ghost button */
@@ -130,15 +148,13 @@
   --ghost-button-foreground: #1d1d1f;
   --ghost-button-interactive-background: #f2f2f7;
   --ghost-button-interactive-foreground: #000000;
-  --ghost-button-border: #d2d2d7;
-  --ghost-button-padding: 12px 16px;
-  --ghost-button-roundness: var(--rounded);
+  --ghost-button-border: 0px #00000000;
+  --ghost-button-roundness: var(--rounded-lg);
 
   /* tool tip */
   --tool-tip-background: #1d1d1f;
   --tool-tip-foreground: #ffffff;
   --tool-tip-border: #1d1d1f;
-  --tool-tip-padding: 8px 12px;
   --tool-tip-roundness: var(--rounded);
 
   /* panel */

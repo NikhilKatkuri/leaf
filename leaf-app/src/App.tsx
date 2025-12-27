@@ -1,5 +1,11 @@
+import TitleBar from "@/components/TitleBar";
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div className="">
+      <TitleBar />
+    </div>
+  );
 };
 
 export default App;
