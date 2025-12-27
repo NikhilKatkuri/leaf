@@ -1,0 +1,197 @@
+:root {
+  /* root colors */
+  --background: #00000000;
+  --foreground: #00000000;
+  --border: #00000000;
+  --interactive-background: #00000000;
+  --interactive-foreground: #00000000;
+  --link: #00000000;
+  --pill-background: #00000000;
+  --pill-foreground: #00000000;
+  --shadow: #00000000;
+  --scrollbar-background: #00000000;
+  --scrollbar-foreground: #00000000;
+  --scrollbar-hover-background: #00000000;
+  --bandage-background: #00000000;
+  --bandage-foreground: #00000000;
+  --bandage-border: #00000000;
+  --bandage-roundness: 50%;
+
+  /* sizes */
+  --rounded-sm: 2px;
+  --rounded: 4px;
+  --rounded-md: 6px;
+  --rounded-lg: 8px;
+  --rounded-xl: 12px;
+
+  --icon-xs: 12px;
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --icon-xl: 32px;
+
+  --logo-sm: 24px;
+  --logo-md: 36px;
+  --logo-base: 48px;
+  --logo-lg: 56px;
+  --logo-xl: 64px;
+
+  /* components colors */
+  /* title bar */
+  --title-bar-background: #00000000;
+  --title-bar-foreground: #00000000;
+  --title-bar-interactive-background: #00000000;
+  --title-bar-interactive-foreground: #00000000;
+  --title-bar-border: #00000000;
+  --title-bar-icon-size: var(--icon-sm);
+  --title-bar-icon-stroke-width: 1.5px;
+
+  /* sidebar */
+  --sidebar-background: #00000000;
+  --sidebar-foreground: #00000000;
+  --sidebar-interactive-background: #00000000;
+  --sidebar-interactive-foreground: #00000000;
+  --sidebar-highlight-background: #00000000;
+  --sidebar-highlight-foreground: #00000000;
+  --sidebar-border: #00000000;
+  --sidebar-icon-size: var(--icon-md);
+  --sidebar-icon-stroke-width: 1.5px;
+
+  /* status bar */
+  --status-bar-background: #00000000;
+  --status-bar-foreground: #00000000;
+  --status-bar-interactive-background: #00000000;
+  --status-bar-interactive-foreground: #00000000;
+  --status-bar-border: #00000000;
+  --status-bar-icon-size: var(--icon-sm);
+  --status-bar-icon-stroke-width: var(--title-bar-icon-stroke-width);
+
+  /* chat bar  */
+  --chat-bar-background: #00000000;
+  --chat-bar-foreground: #00000000;
+  --chat-bar-border: #00000000;
+  --chat-bar-icon-size: var(--icon-sm);
+  --chat-bar-icon-stroke-width: var(--title-bar-icon-stroke-width);
+  --chat-bar-promt-box-background: #00000000;
+  --chat-bar-promt-box-foreground: #00000000;
+  --chat-bar-promt-box-icon-foreground: #00000000;
+  --chat-bar-promt-box-border: #00000000;
+  --chat-bar-promt-box-padding: 16px;
+  --chat-bar-promt-box-icon-size: var(--icon-sm);
+  --chat-bar-promt-box-icon-stroke-width: 1.5px;
+  --chat-bar-promt-box-roundness: var(--rounded-lg);
+
+  /* menu bar */
+  --menu-bar-background: #00000000;
+  --menu-bar-foreground: #00000000;
+  --menu-bar-interactive-background: #00000000;
+  --menu-bar-interactive-foreground: #00000000;
+  --menu-bar-selective-background: #00000000;
+  --menu-bar-selective-foreground: #00000000;
+  --menu-bar-border: #00000000;
+  --menu-bar-icon-size: var(--icon-sm);
+  --menu-bar-icon-stroke-width: var(--title-bar-icon-stroke-width);
+  --menu-bar-icon-color-active: #00000000;
+  --menu-bar-icon-color-inactive: #00000000;
+
+  /* input */
+  --input-background: #00000000;
+  --input-foreground: #00000000;
+  --input-border: #00000000;
+  --input-interactive-border: #00000000;
+  --input-placeholder-foreground: #00000000;
+  --input-icon-foreground: #00000000;
+  --input-icon-size: var(--icon-sm);
+  --input-icon-stroke-width: var(--title-bar-icon-stroke-width);
+  --input-padding: 12px;
+  --input-roundness: var(--rounded);
+
+  /* button (default,ghost,icon) */
+  --button-background: #00000000;
+  --button-foreground: #00000000;
+  --button-interactive-background: #00000000;
+  --button-interactive-foreground: #00000000;
+  --button-border: #00000000;
+  --button-padding: 12px 16px;
+  --button-roundness: var(--rounded);
+
+  /* icon button */
+  --icon-button-background: #00000000;
+  --icon-button-foreground: #00000000;
+  --icon-button-border: #00000000;
+  --icon-button-padding: 8px;
+  --icon-button-roundness: var(--rounded);
+
+  /* ghost button */
+  --ghost-button-background: #00000000;
+  --ghost-button-foreground: #00000000;
+  --ghost-button-interactive-background: #00000000;
+  --ghost-button-interactive-foreground: #00000000;
+  --ghost-button-border: #00000000;
+  --ghost-button-padding: 12px 16px;
+  --ghost-button-roundness: var(--rounded);
+
+  /* tool tip */
+  --tool-tip-background: #00000000;
+  --tool-tip-foreground: #00000000;
+  --tool-tip-border: #00000000;
+  --tool-tip-padding: 8px 12px;
+  --tool-tip-roundness: var(--rounded);
+
+  /* panel */
+  --panel-background: #00000000;
+  --panel-foreground: #00000000;
+  --panel-border: #00000000;
+  --panel-active-background: #00000000;
+  --panel-active-foreground: #00000000;
+  --panel-active-border: #00000000;
+  --panel-interactive-background: #00000000;
+  --panel-interactive-foreground: #00000000;
+  --panel-interactive-border: #00000000;
+  --panel-icon-size: var(--icon-sm);
+  --panel-icon-stroke-width: var(--title-bar-icon-stroke-width);
+  --panel-icon-color: #00000000;
+
+  /* Terminal */
+  --terminal-background: #00000000;
+  --terminal-foreground: #00000000;
+  --terminal-underline-color: #00000000;
+  --terminal-cursor-color: #00000000;
+  --terminal-selection-background: #00000000;
+
+  /* Extension  */
+  --extensions-background: #00000000;
+  --extensions-foreground: #00000000;
+  --extensions-primary-background: #00000000;
+  --extensions-primary-foreground: #00000000;
+  --extensions-secondary-background: #00000000;
+  --extensions-secondary-foreground: #00000000;
+  --extensions-border: #00000000;
+  --extensions-icon-size: var(--icon-md);
+  --extensions-icon-stroke-width: 1.5px;
+  --extensions-icon-color: #00000000;
+  --extensions-icon-box-logo: var(--logo-xl);
+
+  /* Editor related */
+  /* Tab bar*/
+  --tab-bar-background: #00000000;
+  --tab-bar-foreground: #00000000;
+  --tab-bar-border: #00000000;
+  --tab-bar-active-tab-background: #00000000;
+  --tab-bar-active-tab-foreground: #00000000;
+  --tab-bar-active-tab-border: #00000000;
+  --tab-bar-inactive-tab-background: #00000000;
+  --tab-bar-inactive-tab-foreground: #00000000;
+  --tab-bar-inactive-tab-border: #00000000;
+  --tab-bar-icon-size: var(--icon-sm);
+  --tab-bar-icon-stroke-width: var(--title-bar-icon-stroke-width);
+
+  /* bread crumb */
+  --bread-crumb-background: #00000000;
+  --bread-crumb-foreground: #00000000;
+  --bread-crumb-interactive-background: #00000000;
+  --bread-crumb-interactive-foreground: #00000000;
+  --bread-crumb-border: #00000000;
+  --bread-crumb-icon-size: var(--icon-sm);
+  --bread-crumb-icon-stroke-width: var(--title-bar-icon-stroke-width);
+}

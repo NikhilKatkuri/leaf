@@ -1,0 +1,206 @@
+:root {
+  /* root colors - Modern Light Theme (VS Code Copilot + macOS/Windows 12 inspired) */
+  --background: #fafafa;
+  --foreground: #1d1d1f;
+  --border: #d2d2d7;
+  --interactive-background: #f2f2f7;
+  --interactive-foreground: #1d1d1f;
+  --link: #0066cc;
+  --pill-background: #e5e5ea;
+  --pill-foreground: #1d1d1f;
+  --shadow: rgba(0, 0, 0, 0.08);
+  --scrollbar-background: rgba(0, 0, 0, 0.04);
+  --scrollbar-foreground: rgba(0, 0, 0, 0.3);
+  --scrollbar-hover-background: rgba(0, 0, 0, 0.12);
+  --bandage-background: #f2f2f7;
+  --bandage-foreground: #1d1d1f;
+  --bandage-border: #c6c6c8;
+  --bandage-roundness: 50%;
+
+
+  /* sizes */
+  --rounded-sm: 2px;
+  --rounded: 4px;
+  --rounded-md: 6px;
+  --rounded-lg: 8px;
+  --rounded-xl: 12px;
+
+  --icon-xs: 12px;
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --icon-xl: 32px;
+
+  --logo-sm: 24px;
+  --logo-md: 36px;
+  --logo-base: 48px;
+  --logo-lg: 56px;
+  --logo-xl: 64px;
+
+  /* components colors */
+  /* title bar - macOS light style */
+  --title-bar-background: #ffffff;
+  --title-bar-foreground: #1d1d1f;
+  --title-bar-interactive-background: #f2f2f7;
+  --title-bar-interactive-foreground: #000000;
+  --title-bar-border: #e5e5e7;
+  --title-bar-icon-size: var(--icon-sm);
+  --title-bar-icon-stroke-width: 1.5px;
+  --title-bar-highlight-background: #007acc;
+  --title-bar-highlight-foreground: #ffffff;
+
+  /* sidebar - VS Code light style */
+  --sidebar-background: #f3f3f3;
+  --sidebar-foreground: #1d1d1f;
+  --sidebar-interactive-background: #e5e5ea;
+  --sidebar-interactive-foreground: #000000;
+  --sidebar-highlight-background: #007acc;
+  --sidebar-highlight-foreground: #ffffff;
+  --sidebar-border: #d2d2d7;
+  --sidebar-icon-size: var(--icon-md);
+  --sidebar-icon-stroke-width: 1.5px;
+
+  /* status bar - Clean light */
+  --status-bar-background: #f8f8f8;
+  --status-bar-foreground: #6e6e73;
+  --status-bar-interactive-background: #e5e5ea;
+  --status-bar-interactive-foreground: #1d1d1f;
+  --status-bar-border: #d2d2d7;
+  --status-bar-icon-size: var(--icon-sm);
+  --status-bar-icon-stroke-width: var(--title-bar-icon-stroke-width);
+
+  /* chat bar - VS Code Copilot style (100% focus) */
+  --chat-bar-background: #ffffff;
+  --chat-bar-foreground: #1d1d1f;
+  --chat-bar-border: #e1e5e9;
+  --chat-bar-icon-size: var(--icon-sm);
+  --chat-bar-icon-stroke-width: var(--title-bar-icon-stroke-width);
+  --chat-bar-prompt-box-background: #f8f9fa;
+  --chat-bar-prompt-box-foreground: #1d1d1f;
+  --chat-bar-prompt-box-icon-foreground: #6e6e73;
+  --chat-bar-prompt-box-border: #d2d2d7;
+  --chat-bar-prompt-box-padding: 16px;
+  --chat-bar-prompt-box-icon-size: var(--icon-sm);
+  --chat-bar-prompt-box-icon-stroke-width: 1.5px;
+  --chat-bar-prompt-box-roundness: var(--rounded-lg);
+
+  /* menu bar */
+  --menu-bar-background: #fafafa;
+  --menu-bar-foreground: #1d1d1f;
+  --menu-bar-interactive-background: #f2f2f7;
+  --menu-bar-interactive-foreground: #000000;
+  --menu-bar-selective-background: #e5e5ea;
+  --menu-bar-selective-foreground: #000000;
+  --menu-bar-border: #d2d2d7;
+  --menu-bar-icon-size: var(--icon-sm);
+  --menu-bar-icon-stroke-width: var(--title-bar-icon-stroke-width);
+  --menu-bar-icon-color-active: #007acc;
+  --menu-bar-icon-color-inactive: #6e6e73;
+
+  /* input - Clean modern */
+  --input-background: #ffffff;
+  --input-foreground: #1d1d1f;
+  --input-border: #d2d2d7;
+  --input-interactive-border: #007acc;
+  --input-placeholder-foreground: #86868b;
+  --input-icon-foreground: #6e6e73;
+  --input-icon-size: var(--icon-sm);
+  --input-icon-stroke-width: var(--title-bar-icon-stroke-width);
+  --input-padding: 12px;
+  --input-roundness: var(--rounded);
+
+  /* button (default,ghost,icon) */
+  --button-background: #007acc;
+  --button-foreground: #ffffff;
+  --button-interactive-background: #0066cc;
+  --button-interactive-foreground: #ffffff;
+  --button-border: transparent;
+  --button-padding: 12px 16px;
+  --button-roundness: var(--rounded);
+
+  /* icon button */
+  --icon-button-background: transparent;
+  --icon-button-foreground: #1d1d1f;
+  --icon-button-border: transparent;
+  --icon-button-padding: 8px;
+  --icon-button-roundness: var(--rounded);
+
+  /* ghost button */
+  --ghost-button-background: transparent;
+  --ghost-button-foreground: #1d1d1f;
+  --ghost-button-interactive-background: #f2f2f7;
+  --ghost-button-interactive-foreground: #000000;
+  --ghost-button-border: #d2d2d7;
+  --ghost-button-padding: 12px 16px;
+  --ghost-button-roundness: var(--rounded);
+
+  /* tool tip */
+  --tool-tip-background: #1d1d1f;
+  --tool-tip-foreground: #ffffff;
+  --tool-tip-border: #1d1d1f;
+  --tool-tip-padding: 8px 12px;
+  --tool-tip-roundness: var(--rounded);
+
+  /* panel */
+  --panel-background: #ffffff;
+  --panel-foreground: #1d1d1f;
+  --panel-border: #d2d2d7;
+  --panel-roundness: var(--rounded);
+  --panel-active-background: #f8f9fa;
+  --panel-active-foreground: #000000;
+  --panel-active-border: #007acc;
+  --panel-interactive-background: #f2f2f7;
+  --panel-interactive-foreground: #000000;
+  --panel-interactive-border: #d2d2d7;
+  --panel-icon-size: var(--icon-sm);
+  --panel-icon-stroke-width: var(--title-bar-icon-stroke-width);
+  --panel-icon-color: #6e6e73;
+
+  /* Terminal */
+  --terminal-background: #1e1e1e;
+  --terminal-foreground: #d4d4d4;
+  --terminal-border: #d2d2d7;
+  --terminal-underline-color: #007acc;
+  --terminal-cursor-color: #ffffff;
+  --terminal-cursor-background: #ffffff;
+  --terminal-cursor-foreground: #1e1e1e;
+  --terminal-selection-background: rgba(128, 128, 128, 0.3);
+
+  /* Extension */
+  --extensions-background: #f8f9fa;
+  --extensions-foreground: #1d1d1f;
+  --extensions-primary-background: #007acc;
+  --extensions-primary-foreground: #ffffff;
+  --extensions-secondary-background: #e5e5ea;
+  --extensions-secondary-foreground: #1d1d1f;
+  --extensions-border: #d2d2d7;
+  --extensions-icon-size: var(--icon-md);
+  --extensions-icon-stroke-width: 1.5px;
+  --extensions-icon-color: #6e6e73;
+  --extensions-box-logo: var(--logo-xl);
+
+  /* Editor related */
+  /* Tab bar*/
+  --tab-bar-background: #f5f5f7;
+  --tab-bar-foreground: #6e6e73;
+  --tab-bar-border: #d2d2d7;
+  --tab-bar-active-tab-background: #ffffff;
+  --tab-bar-active-tab-foreground: #1d1d1f;
+  --tab-bar-active-tab-border: #007acc;
+  --tab-bar-inactive-tab-background: transparent;
+  --tab-bar-inactive-tab-foreground: #6e6e73;
+  --tab-bar-inactive-tab-border: transparent;
+  --tab-bar-icon-size: var(--icon-sm);
+  --tab-bar-icon-stroke-width: var(--title-bar-icon-stroke-width);
+
+  /* bread crumb */
+  --bread-crumb-background: #f8f9fa;
+  --bread-crumb-foreground: #1d1d1f;
+  --bread-crumb-interactive-background: #e5e5ea;
+  --bread-crumb-interactive-foreground: #000000;
+  --bread-crumb-border: #d2d2d7;
+  --bread-crumb-roundness: var(--rounded);
+  --bread-crumb-icon-size: var(--icon-sm);
+  --bread-crumb-icon-stroke-width: var(--title-bar-icon-stroke-width);
+  --bread-crumb-icon-color: #6e6e73;
+}

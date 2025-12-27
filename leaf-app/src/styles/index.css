@@ -1,1 +1,296 @@
 @import "tailwindcss";
+@import "./light.css";
+@import "./font.css";
+
+html,
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family);
+}
+
+code,
+pre {
+  font-family: var(--font-code);
+}
+
+.a {
+  color: var(--link);
+}
+
+.pill {
+  background: var(--title-bar-highlight-background);
+  color: var(--title-bar-highlight-foreground);
+}
+
+.bandage {
+  background: var(--bandage-background);
+  color: var(--bandage-foreground);
+  border-radius: var(--bandage-roundness);
+  border-color: var(--bandage-border);
+}
+
+.title-bar {
+  background: var(--title-bar-background);
+  color: var(--title-bar-foreground);
+  border-bottom: 1px solid var(--title-bar-border);
+}
+
+.title-bar .icon {
+  stroke-width: var(--title-bar-icon-stroke-width);
+  width: var(--title-bar-icon-size);
+  aspect-ratio: 1 / 1;
+}
+
+.title-bar .hover {
+  background: var(--title-bar-interactive-background);
+  color: var(--title-bar-interactive-foreground);
+  border-bottom: 1px solid var(--title-bar-border);
+}
+
+.sidebar {
+  background: var(--sidebar-background);
+  color: var(--sidebar-foreground);
+  border-right: 1px solid var(--sidebar-border);
+}
+
+.sidebar .icon {
+  stroke-width: var(--sidebar-icon-stroke-width);
+  width: var(--sidebar-icon-size);
+  aspect-ratio: 1 / 1;
+}
+.sidebar .hover {
+  background: var(--sidebar-interactive-background);
+  color: var(--sidebar-interactive-foreground);
+}
+.sidebar .highlight {
+  background: var(--sidebar-highlight-background);
+  color: var(--sidebar-highlight-foreground);
+}
+.status-bar {
+  background: var(--status-bar-background);
+  color: var(--status-bar-foreground);
+  border-top: 1px solid var(--status-bar-border);
+}
+.status-bar .icon {
+  stroke-width: var(--status-bar-icon-stroke-width);
+  width: var(--status-bar-icon-size);
+  aspect-ratio: 1 / 1;
+}
+.status-bar .hover {
+  background: var(--status-bar-interactive-background);
+  color: var(--status-bar-interactive-foreground);
+}
+
+.chat-bar {
+  background: var(--chat-bar-background);
+  color: var(--chat-bar-foreground);
+  border-top: 1px solid var(--chat-bar-border);
+}
+.chat-bar .icon {
+  stroke-width: var(--chat-bar-icon-stroke-width);
+  width: var(--chat-bar-icon-size);
+  aspect-ratio: 1 / 1;
+}
+
+.chat-bar .prompt-box {
+  background: var(--chat-bar-prompt-box-background);
+  color: var(--chat-bar-prompt-box-foreground);
+  border: 1px solid var(--chat-bar-prompt-box-border);
+  border-radius: var(--chat-bar-prompt-box-roundness);
+  padding: var(--chat-bar-prompt-box-padding);
+}
+.chat-bar .prompt-box .icon {
+  stroke-width: var(--chat-bar-prompt-box-icon-stroke-width);
+  width: var(--chat-bar-prompt-box-icon-size);
+  aspect-ratio: 1 / 1;
+  color: var(--chat-bar-prompt-box-icon-foreground);
+}
+
+.menu-bar {
+  background: var(--menu-bar-background);
+  color: var(--menu-bar-foreground);
+  border: 1px solid var(--menu-bar-border);
+}
+.menu-bar .icon {
+  stroke-width: var(--menu-bar-icon-stroke-width);
+  width: var(--menu-bar-icon-size);
+  aspect-ratio: 1 / 1;
+  color: var(--menu-bar-icon-color-inactive);
+}
+.menu-bar .icon.active {
+  color: var(--menu-bar-icon-color-active);
+}
+.menu-bar .hover {
+  background: var(--menu-bar-interactive-background);
+  color: var(--menu-bar-interactive-foreground);
+}
+
+.input {
+  background: var(--input-background);
+  color: var(--input-foreground);
+  border: 1px solid var(--input-border);
+  border-radius: var(--input-roundness);
+  padding: var(--input-padding);
+}
+
+.input[placeholder] {
+  color: var(--input-placeholder-foreground);
+}
+
+.input .hover {
+  border-color: var(--input-interactive-border);
+}
+
+.input .icon {
+  stroke-width: var(--input-icon-stroke-width);
+  width: var(--input-icon-size);
+  aspect-ratio: 1 / 1;
+  color: var(--input-icon-foreground);
+}
+.button {
+  background: var(--button-background);
+  color: var(--button-foreground);
+  border: 1px solid var(--button-border);
+  border-radius: var(--button-roundness);
+  padding: var(--button-padding);
+}
+.button .hover {
+  background: var(--button-interactive-background);
+  color: var(--button-interactive-foreground);
+}
+
+.icon-button {
+  background: var(--icon-button-background);
+  color: var(--icon-button-foreground);
+  border: 1px solid var(--icon-button-border);
+  border-radius: var(--icon-button-roundness);
+  padding: var(--icon-button-padding);
+}
+.icon-button .hover {
+  background: var(--button-interactive-background);
+  color: var(--button-interactive-foreground);
+}
+
+.ghost-button {
+  background: var(--ghost-button-background);
+  color: var(--ghost-button-foreground);
+  border: 1px solid var(--ghost-button-border);
+  border-radius: var(--ghost-button-roundness);
+  padding: var(--ghost-button-padding);
+}
+
+.ghost-button .hover {
+  background: var(--ghost-button-interactive-background);
+  color: var(--ghost-button-interactive-foreground);
+}
+.tool-tip {
+  background: var(--tool-tip-background);
+  color: var(--tool-tip-foreground);
+  border: 1px solid var(--tool-tip-border);
+  border-radius: var(--tool-tip-roundness);
+  padding: var(--tool-tip-padding);
+}
+.panel {
+  background: var(--panel-background);
+  color: var(--panel-foreground);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--panel-roundness);
+}
+.panel .active {
+  background: var(--panel-active-background);
+  color: var(--panel-active-foreground);
+  border: 1px solid var(--panel-active-border);
+}
+.panel .interactive {
+  background: var(--panel-interactive-background);
+  color: var(--panel-interactive-foreground);
+  border: 1px solid var(--panel-interactive-border);
+}
+.panel .icon {
+  stroke-width: var(--panel-icon-stroke-width);
+  width: var(--panel-icon-size);
+  aspect-ratio: 1 / 1;
+  color: var(--panel-icon-color);
+}
+.terminal {
+  background: var(--terminal-background);
+  color: var(--terminal-foreground);
+  border: 1px solid var(--terminal-border);
+}
+.terminal .cursor {
+  background: var(--terminal-cursor-background);
+  color: var(--terminal-cursor-foreground);
+}
+.terminal .underline {
+  border-bottom: 2px solid var(--terminal-underline-color);
+}
+.terminal .cursor {
+  background: var(--terminal-cursor-color);
+}
+
+.terminal .selection {
+  background: var(--terminal-selection-background);
+}
+
+.extensions {
+  background: var(--extensions-background);
+  color: var(--extensions-foreground);
+  border: 1px solid var(--extensions-border);
+}
+.extensions .primary {
+  background: var(--extensions-primary-background);
+  color: var(--extensions-primary-foreground);
+}
+.extensions .secondary {
+  background: var(--extensions-secondary-background);
+  color: var(--extensions-secondary-foreground);
+}
+.extensions .icon {
+  stroke-width: var(--extensions-icon-stroke-width);
+  width: var(--extensions-icon-size);
+  aspect-ratio: 1 / 1;
+  color: var(--extensions-icon-color);
+}
+.extensions .logo {
+  width: var(--extensions-box-logo);
+  aspect-ratio: 1 / 1;
+}
+
+.tab-bar {
+  background: var(--tab-bar-background);
+  color: var(--tab-bar-foreground);
+  border-bottom: 1px solid var(--tab-bar-border);
+}
+
+.tab-bar .active-tab {
+  background: var(--tab-bar-active-tab-background);
+  color: var(--tab-bar-active-tab-foreground);
+  border-bottom: 1px solid var(--tab-bar-active-tab-border);
+}
+.tab-bar .inactive-tab {
+  background: var(--tab-bar-inactive-tab-background);
+  color: var(--tab-bar-inactive-tab-foreground);
+  border-bottom: 1px solid var(--tab-bar-inactive-tab-border);
+}
+.tab-bar .icon {
+  stroke-width: var(--tab-bar-icon-stroke-width);
+  width: var(--tab-bar-icon-size);
+  aspect-ratio: 1 / 1;
+}
+.bread-crumb {
+  background: var(--bread-crumb-background);
+  color: var(--bread-crumb-foreground);
+  border: 1px solid var(--bread-crumb-border);
+  border-radius: var(--bread-crumb-roundness);
+}
+.bread-crumb .interactive {
+  background: var(--bread-crumb-interactive-background);
+  color: var(--bread-crumb-interactive-foreground);
+}
+.bread-crumb .icon {
+  stroke-width: var(--bread-crumb-icon-stroke-width);
+  width: var(--bread-crumb-icon-size);
+  aspect-ratio: 1 / 1;
+  color: var(--bread-crumb-icon-color);
+}
