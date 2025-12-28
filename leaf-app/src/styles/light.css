@@ -58,7 +58,7 @@
   );
 
   /* sidebar - VS Code light style */
-  --sidebar-background: #f3f3f3;
+  --sidebar-background: #e5e5e51a;
   --sidebar-foreground: #1d1d1f;
   --sidebar-interactive-background: #e5e5ea;
   --sidebar-interactive-foreground: #000000;
@@ -173,8 +173,8 @@
   --panel-icon-color: #6e6e73;
 
   /* Terminal */
-  --terminal-background: #1e1e1e;
-  --terminal-foreground: #d4d4d4;
+  --terminal-background: var(--side-bar-background);
+  --terminal-foreground: #3f3e3e;
   --terminal-border: #d2d2d7;
   --terminal-underline-color: #007acc;
   --terminal-cursor-color: #ffffff;

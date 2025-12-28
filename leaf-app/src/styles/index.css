@@ -283,8 +283,8 @@ svg {
   background: var(--terminal-cursor-background);
   color: var(--terminal-cursor-foreground);
 }
-.terminal .underline {
-  border-bottom: 2px solid var(--terminal-underline-color);
+.terminal .underline_ {
+  border-color: var(--terminal-underline-color);
 }
 .terminal .cursor {
   background: var(--terminal-cursor-color);
